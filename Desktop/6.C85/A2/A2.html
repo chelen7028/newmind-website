@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 2</title>
+	<link rel="stylesheet" href="/Users/helenchen/Desktop/6.C85/A2/format.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 2: Exploratory Data Analysis</small>
+			
+		</h1>
+
+		<p>
+			<strong>Helen Chen</strong> — <em>chelen@mit.edu</em>
+		</p>
+	</header>
+	<main>
+		<section>
+			<h2>Subtheme: Corporate Landlords & Evictions</h2>
+
+			<h3>Overall Analysis Questions</h3>
+			<ol>
+				<li>How has the rate of corporate ownership and owner occupancy changed over time?</li>
+				<li>Are areas with more corporate owners more expensive?</li>
+				<li>What is the racial distribution of Boston? Specifically, what neighborhoods have higher White population % versus Black and Latinx population %?</li>
+				<li>Which part of Boston has the highest growth in corporate ownership?</li>
+				<li>Which types of properties are corporate buyers most interested in buying?</li>
+				<li>What factors influence corporate purchase intention?</li>
+			</ol>
+		</section>
+
+		<section>
+			<h2>Discoveries & Insights</h2>
+
+			<figure>
+				<img src="/Users/helenchen/Desktop/6.C85/A2/Rates_Over_Time.png" alt="" id="responsive-image"/>
+				<figcaption>
+				We start by looking at overall owner-occupancy and corporate-ownership rates across the 
+				years to address any data quality issues. This dataset includes values from 2004 to 2024 
+				and overall there do not seem to be any outliers. Although the sum of these rates do not 
+				add to 1.0, this is most likely accounted for by the lack of rates for properties that are 
+				not owner-occupied but are owned by an individual or family rather than a corporation. This 
+				difference could also be due to the fact that corporate ownership is determined via keyphrase 
+				matching, as mentioned in the metadata, so a few corporate-owned properties could be left 
+				out. 
+				<p> 
+					Our first step is looking at how overall owner-occupancy rates (shown in green) and 
+					corporate-ownership rates (shown in blue) have changed from 2004 to 2024. Here, we can see 
+					that owner-occupancy rates and corporate-ownership rates are almost inversely proportional: 
+					median owner-occupancy rates have decreased from 2004 to 2024, whereas median corporate ownership 
+					rates have increased. This chart shows that corporate ownership rates have increased over years, 
+					but further analysis needs to be done to determine whether this growth of corporate ownership 
+					rate is constant across all regions of Boston, or if certain neighborhoods are seeing more 
+					corporate ownership than others. 
+				</p>
+
+
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="/Users/helenchen/Desktop/6.C85/A2/Corp_Own_Map.png" alt="" id="responsive-image"/>
+				<figcaption>
+				Looking at geographic data, I noticed that multiple zip codes were linked to a neighborhood 
+				named Downtown, even though the respective regions are on different sides of Boston. To avoid 
+				any confusion, I excluded all neighborhoods named Downtown from analysis. Additionally, the 
+				Corporate ownership rates and owner occupancy rates in Boston neighborhoods, 2004-2024 dataset 
+				does not have data for the Back Bay and Mission Hill neighborhoods, so these are also excluded 
+				from future analysis. Comparing the other neighborhoods with other maps, the general regions 
+				looked accurate.
+
+				<p>
+				The map above shows the median corporate ownership rate from 2004 to 2024. Notably, South Boston 
+				Waterfront, Roxbury, Longwood, and Allston have the highest corporate ownership rates. On the 
+				flip side, Roslindale and West Roxbury have the lowest corporate ownership rates.
+				</p>
+
+					<newline> </newline>					
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="/Users/helenchen/Desktop/6.C85/A2/Corp_Buyers.png" alt="" id="responsive-image"/>
+				<figcaption>
+				To better understand how corporate ownership rates have changed over time, I calculated the difference 
+				between rates in 2024 and 2004 and mapped that to various neighborhoods of Boston. From this chart, 
+				we can see that the highest area of growth in corporate ownership is in East Boston, Beacon Hill, Charlestown, 
+				Longwood, and the South Boston Waterfront – all of which are in the northeast portion of the city. These 
+				areas have much overlap with the areas with high median corporate ownership rates from the previous chart, 
+				suggesting an interesting observation where corporate owners are choosing to buy in areas that are already 
+				densely populated with other corporate owners rather than expanding to other neighborhoods. Why is this the 
+				case? Does this have to do purely with simple supply and demand, or are other factors at play?
+
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="/Users/helenchen/Desktop/6.C85/A2/House_Value.png" alt="" id="responsive-image"/>
+				<figcaption>
+				Before further exploring the relationship between corporate ownership rates and housing prices, 
+				I examined the overall change in price of housing over time. In order to look at the 
+				change in house prices, I focused on price difference values between consecutive transactions. 
+				Moreover, I normalized the price across different property sizes by determining the price per 
+				interior square foot. This chart shows the change in median price difference per interior square
+				foot from 2000 to 2023. As you can see, 2023 has a median of 0, suggesting that there is not 
+				much data for the year of 2023 yet, so all 2023 values can be excluded from other analyses. 
+				Additionally, we observe an irregular dip from 2006 to 2012. This can be explained by the subprime
+				mortgage crisis which started in 2006, which later led to the Great Recession, whose effects lasted
+				through 2011.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="/Users/helenchen/Desktop/6.C85/A2/Price_Map.png" alt="" id="responsive-image"/>
+				<figcaption>
+				This map shows the median price of houses bought from 2000-2023. The South Boston Waterfront 
+				and Charlestown neighborhoods are the most expensive. These two neighborhoods were also among 
+				the neighborhoods with high corporate ownership rates from the previous figures. 
+
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="/Users/helenchen/Desktop/6.C85/A2/Black_Latinx.png" alt="" id="responsive-image"/>
+				<figcaption>
+				ENTER IMAGE CAPTION HERE.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="/Users/helenchen/Desktop/6.C85/A2/Family.png" alt="" id="responsive-image"/>
+				<figcaption>
+				ENTER IMAGE CAPTION HERE.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="/Users/helenchen/Desktop/6.C85/A2/Proptypes.png" alt="" id="responsive-image"/>
+				<figcaption>
+				ENTER IMAGE CAPTION HERE.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="/Users/helenchen/Desktop/6.C85/A2/Bedrooms.png" alt="" id="responsive-image"/>
+				<figcaption>
+				ENTER IMAGE CAPTION HERE.
+				</figcaption>
+			</figure>
+		</section>
+
+		<section>
+			<h2>Summary</h2>
+
+			<p>WRITE FINAL SUMMARY HERE.</p>
+		</section>
+	</main>
+</body>
+</html>
