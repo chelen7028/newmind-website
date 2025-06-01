@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Program Name</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #4f46e5;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    .cta-button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: #4f46e5;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 1rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1rem;
+    }
+    input, button {
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #4f46e5;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+    button:hover {
+      background-color: #4338ca;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Global Academy</h1>
+    <p>A short, engaging tagline that explains what your program does.</p>
+    <a href="#signup" class="cta-button">Get Started</a>
+  </header>
+
+  <main>
+    <section>
+      <h2>About the Program</h2>
+      <p>Briefly describe what the program is, what problem it solves, and who it is for.</p>
+    </section>
+
+    <section id="apply">
+    <h1>Apply for the Program</h1>
+    <form action="/apply" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required><br />
+      <input type="email" name="email" placeholder="Email" required><br />
+      <input type="tel" name="phone" placeholder="Phone Number" required><br />
+      <button type="submit">Submit</button>
+    </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Your Company Name. All rights reserved.
+  </footer>
+
+</body>
+</html>
